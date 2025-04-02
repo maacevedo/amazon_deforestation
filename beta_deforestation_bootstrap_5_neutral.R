@@ -1,7 +1,7 @@
 ###############################
 # Beta regression analysis
 # Programmer: Miguel Acevedo
-##################################
+################################
 
 # Load the necessary packages
 library(ggplot2)
