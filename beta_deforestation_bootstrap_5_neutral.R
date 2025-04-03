@@ -64,7 +64,7 @@ p_beta_re <- ggplot(preds_re, aes(x = def50_prop, y = fit)) +
 ##########################################
 #Deforestation predictions: Simulation
 ##########################################
-set.seed(137)
+set.seed(123) #also used 137
 
 source("neutral.R")
 neutral_slope = coef(mod)[2]
@@ -78,7 +78,7 @@ for (r in 1:100){
   
   # Function to simulate from the fitted model
   nsim <- 1000  # number of simulations
-  predictions <- simulate(mod_beta_re, nsim = nsim, seed = 137)
+  predictions <- simulate(mod_beta_re, nsim = nsim, seed = 123)
   
   # Calculate sum of differences for each simulation
   sum_diffs <- sapply(1:nsim, function(i) {
